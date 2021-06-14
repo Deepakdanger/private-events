@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   def index
     @events = Event.all
   end
@@ -8,9 +9,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    user =User.find(current_user.id)
-    
-    @event = user.event.build(post_params)
+        
+    @event = User.find(current_user.id).events.build(event_params)
     if @event.save
       redirect_to root_path
     else
@@ -24,7 +24,7 @@ class EventsController < ApplicationController
 
   private
 
-  def post_params
+  def event_params
     params.require(:event).permit(:event_name, :events_date, :location).merge(user: current_user)
   end
 end
