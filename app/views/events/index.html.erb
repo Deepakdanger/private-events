@@ -1,11 +1,12 @@
-<h1>Events  index  page</h1>
+<h1>Events  index  page</h1><br>
 
-
+<%= link_to "MY EVENT", user_path(current_user.id) %><br>
+<%= link_to "CREATE EVENT", new_event_path %><br>
 <h3>The Up-coming Events</h3>
 <ul>
 <% @events.future_event.each do |event| %>
     <li>
-    <%=event.event_name%><br>
+    <%= link_to event.event_name, event_path(event.id) %><br>
     </li>
 <%end%>
 </ul>
@@ -14,7 +15,13 @@
 <ul>
 <% @events.past_event.each do |event| %>
     <li>
-    <%=event.event_name%><br>
+    <%= link_to event.event_name, event_path(event.id)%><br>
     </li>
 <%end%>
 </ul>
+
+<% if user_signed_in?%>
+  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% else %> 
+  <%= link_to "Sign in", user_session_path%>
+<% end %> 

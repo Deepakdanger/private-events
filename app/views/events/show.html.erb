@@ -2,9 +2,10 @@
 
 <%= @event.event_name%><br>
 <%= @event.events_date%><br>
-<%= @event.location%>
+<%= @event.location%><br>
 
-
+ <%= link_to "DELETE EVENT", event_path(@event.id), :method => :delete %><br>
+  <%= link_to "ATTEND", event_attendees_path, :method => :post %><br>
 <h3>Attendees</h3>
 <ul>
 <% @event.attendees.each do |attendee| %>
