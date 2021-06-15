@@ -1,6 +1,6 @@
 <h1>Event # new</h1>
 
-<%= form_with model: @event, method: post do |form| %>
+<%= form_with model: @event do |form| %>
   <%= form.label :event_name, "Title of Event:"%> 
   <%= form.text_field :event_name%><br><br>
 

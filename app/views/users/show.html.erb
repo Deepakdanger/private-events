@@ -1,9 +1,9 @@
 <h1>Users#show</h1>
 
 <ul>
-<% @user_created_event.each do |event| %>
+<% @user_created_events.each do |event| %>
     <li>
-    <%event.event_name%><br>
+    <%=event.event_name%><br>
     </li>
 <%end%>
 </ul>

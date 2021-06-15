@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+rails g migration add_creator_id_to_events creator_id:integer
