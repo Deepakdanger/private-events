@@ -1,5 +1,5 @@
 # Private event
-This project allows users to view, create, delete, or attend events, and the main focus in this project is Active Records and Associations. The full description of this project can be found here. [here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/associations).
+This project allows users to view, create, delete, or attend events. The main focus in this project was Active Records and Associations. The full description of this project can be found here. [here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/associations).
 
 ## Built with
 - Ruby on Rails
