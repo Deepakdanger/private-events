@@ -1,6 +1,10 @@
-<h1>Users#show</h1>
+<h1>My Events</h1>
+<%= link_to "Home", events_path %><br><br>
 
 <h3>My Created Events</h3>
+<% if @created_events.length < 1%>
+<p>No Created Events </p>
+<% else%>
 <ul>
 <% @created_events.each do |event| %>
     <li>
@@ -8,8 +12,12 @@
     </li>
 <%end%>
 </ul>
+<%end%>
 
 <h3>My Up-coming Attending Events</h3>
+<% if @attending_events.future_event.length < 1%>
+<p>No Up-coming Events </p>
+<% else%>
 <ul>
 <% @attending_events.future_event.each do |event| %>
     <li>
@@ -17,8 +25,12 @@
     </li>
 <%end%>
 </ul>
+<%end%>
 
 <h3>My Past Attended Events</h3>
+<% if @attending_events.past_event.length < 1%>
+<p>No Past Events </p>
+<% else%>
 <ul>
 <% @attending_events.past_event.each do |event| %>
     <li>
@@ -26,4 +38,4 @@
     </li>
 <%end%>
 </ul>
-
+<%end %>

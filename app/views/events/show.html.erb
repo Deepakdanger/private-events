@@ -1,11 +1,19 @@
 <h1>Events show page </h1>
+<%= link_to "Home", events_path %><br><br>
 
-<%= @event.event_name%><br>
-<%= @event.events_date%><br>
-<%= @event.location%><br>
+<h2>Event Details</h2>
 
- <%= link_to "DELETE EVENT", event_path(@event.id), :method => :delete %><br>
-  <%= link_to "ATTEND", event_attendees_path, :method => :post %><br>
+<p>Name: <%=  @event.event_name%><br></p>
+<p>Date: <%= @event.events_date%><br></p>
+<p>Location: <%= @event.location%><br> <br></p>
+
+
+ <%= link_to "Delete Event", event_path(@event.id), :method => :delete %><br><br>
+ 
+ <% if @event.events_date > Date.today %>
+ <%= link_to "Attend Event", event_event_attendees_path(@event), method: :post %><br><br>
+ <% end%>
+ 
 <h3>Attendees</h3>
 <ul>
 <% @event.attendees.each do |attendee| %>

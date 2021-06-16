@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  resources :events
+  
   devise_for :users
   root to: "events#index"
-  resources :event_attendees
-
+  resources :events do
+    resources :event_attendees, only: [:create]
+  end
   resources :users
 
 
