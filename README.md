@@ -32,7 +32,7 @@ After cloning the repo, you also need to install the required gems in your machi
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome.
-Fell free to check the [issues page](https://github.com/blakbox23/private-events/issues)
+Fell free to check the [issues page](https://github.com/Deepakdanger/private-events/issues)
 
 ## Show your support
 Give a ⭐ if you like this project.
