@@ -1,12 +1,4 @@
-<h1>Events  index  page</h1><br>
-
-<% if user_signed_in?%>
-<%= link_to "MY EVENTS", user_path(current_user.id) %><br>
-<%= link_to "CREATE EVENT", new_event_path %><br><br>
-  <%= link_to "SIGN OUT", destroy_user_session_path, :method => :delete %>
-  <% else %> 
-  <%= link_to "Sign in", user_session_path%>
-<% end %> 
+<h1>Home Page</h1><br>
 
 
 <h3>The Up-coming Events</h3>

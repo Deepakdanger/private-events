@@ -4,7 +4,7 @@ class EventAttendeesController < ApplicationController
     already_attended = event.event_attendees.find_by(attendee_id: current_user.id)
 
     if already_attended
-      edirect_to event_path(event)
+      # redirect_to event_path(event)
     else
       @event_attendee = event.event_attendees.build(attendee_id: current_user.id)
 
