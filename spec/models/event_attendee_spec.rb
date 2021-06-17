@@ -13,4 +13,13 @@ RSpec.describe 'Event', type: :model do
     event = EventAttendee.new(event_id: 1, attendee_id: 1)
     expect(event.save).to be(true)
   end
+
+  it 'should belong to the user' do
+    a = EventAttendee.reflect_on_association(:event)
+    expect(a.macro).to eq(:belongs_to)
+  end
+  it 'should belong to the user' do
+    a = EventAttendee.reflect_on_association(:attendee)
+    expect(a.macro).to eq(:belongs_to)
+  end
 end
