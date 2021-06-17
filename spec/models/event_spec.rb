@@ -15,4 +15,16 @@ RSpec.describe 'Event', type: :model do
     event1 = Event.new(event_name: 'event', events_date: '2/2/2', location: 'home', creator_id: 2)
     expect(event1.save).to be true
   end
+
+    it "should have many attendees" do
+      t = Event.reflect_on_association(:attendees)
+      expect(t.macro).to eq(:has_many)
+
+    end
+
+    it "should belong to a creator" do
+      t = Event.reflect_on_association(:creator)
+      expect(t.macro).to eq(:belongs_to)
+    
+  end
 end
