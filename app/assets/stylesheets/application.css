@@ -14,15 +14,17 @@
  *= require_self
  */
 
-nav btn{
-     text-decoration: none;
-     color:#fff;
- }
+nav .btn {
+  text-decoration: none;
+  color: #fff;
+}
+
 nav a {
-     text-decoration: none;
-     color: #000;
-     margin-right: 10px;
- }
+  text-decoration: none;
+  color: #000;
+  margin-right: 10px;
+}
+
 a:hover {
-    color:chartreuse;
+  color: chartreuse;
 }
