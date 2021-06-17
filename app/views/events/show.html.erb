@@ -7,9 +7,10 @@
 <p>Date: <%= @event.events_date%><br></p>
 <p>Location: <%= @event.location%><br> <br></p>
 
-
+ <% if current_user.id==@event.creator.id%>
  <%= link_to "Delete Event", event_path(@event.id), :method => :delete %><br><br>
- 
+  <% end%>
+
  <% if @event.events_date > Date.today %>
  <%= link_to "Attend Event", event_event_attendees_path(@event), method: :post %><br><br>
  <% end%>

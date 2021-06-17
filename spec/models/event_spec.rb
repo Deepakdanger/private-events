@@ -11,11 +11,6 @@ RSpec.describe 'Event', type: :model do
     expect(event.save).to be(false)
   end
 
-  it 'is valid with a date,name & location' do
-    event1 = Event.new(event_name: 'event', events_date: '2/2/2', location: 'home', creator_id: 2)
-    expect(event1.save).to be true
-  end
-
   it 'should have many attendees' do
     a = Event.reflect_on_association(:attendees)
     expect(a.macro).to eq(:has_many)
