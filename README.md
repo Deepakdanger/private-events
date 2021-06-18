@@ -1,24 +1,38 @@
-# README
+# Private event
+This project allows users to view, create, delete, or attend events. The main focus in this project was Active Records and Associations. The full description of this project can be found here. [here](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/associations).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built with
+- Ruby on Rails
 
-Things you may want to cover:
+## Getting Started
+Clone this repository to get a copy of this project. 
+- Open your terminal
+- Run `git clone https://github.com/blakbox23/private-events.git`
+- Open the project with your favorite code editor.
 
-* Ruby version
+## Installation
+After cloning the repo, you also need to install the required gems in your machine.
+- Run `bundle install` to install the dependencies.
+- Run `rails db:create` and `rails db:migrate` to create required database tables.
 
-* System dependencies
+ Run `rails server` to run the project.
+ Visit `localhost:3000` in chrome or any browser to see the project and enjoy.
 
-* Configuration
+## Authors
 
-* Database creation
+👤 **Peter Mbuthia**
 
-* Database initialization
+- GitHub: [@Blakbox23](https://github.com/blakbox23)
+- Twitter: [@blakbox23](https://twitter.com/blakbox23)
+- LinkedIn: [Peter Mbuthia](https://www.linkedin.com/in/peter-mbuthia)
 
-* How to run the test suite
+👤 **Deepak Kumar**
+- GitHub: [@Deepakdanger](https://github.com/Deepakdanger)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome.
+Fell free to check the [issues page](https://github.com/Deepakdanger/private-events/issues)
 
-* ...
+## Show your support
+Give a ⭐ if you like this project.

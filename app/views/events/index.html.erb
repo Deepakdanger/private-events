@@ -1,0 +1,29 @@
+<h1>Home Page</h1><br>
+
+
+<h3>The Up-coming Events</h3>
+<% if @events.future_event.length < 1%>
+<p>No Up-coming Events </p>
+<% else%>
+<ul>
+<% @events.future_event.each do |event| %>
+    <li>
+    <%= link_to event.event_name, event_path(event.id) %><br>
+    </li>
+<%end%>
+</ul>
+<%end%>
+
+<h3>The Past Events</h3>
+<% if @events.past_event.length < 1%>
+<p>No Past Events </p>
+<% else%>
+<ul>
+<% @events.past_event.each do |event| %>
+    <li>
+    <%= link_to event.event_name, event_path(event.id)%><br>
+    </li>
+<%end%>
+</ul>
+<%end%>
+
